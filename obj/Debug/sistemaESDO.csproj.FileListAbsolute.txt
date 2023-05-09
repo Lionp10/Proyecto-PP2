@@ -1,0 +1,144 @@
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\sistemaESDO.dll.config
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\sistemaESDO.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\sistemaESDO.pdb
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\csc.exe
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\csc.exe.config
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\csc.rsp
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\csi.exe
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\csi.exe.config
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\csi.rsp
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Buffers.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Collections.Immutable.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Memory.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Numerics.Vectors.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Reflection.Metadata.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\vbc.exe
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\vbc.exe.config
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\vbc.rsp
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\VBCSCompiler.exe
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\roslyn\VBCSCompiler.exe.config
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Antlr3.Runtime.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\EntityFramework.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\EntityFramework.SqlServer.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Microsoft.Web.Infrastructure.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Newtonsoft.Json.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Helpers.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Mvc.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Optimization.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Razor.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.WebPages.Deployment.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.WebPages.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.WebPages.Razor.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\WebGrease.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\EntityFramework.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\EntityFramework.SqlServer.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Newtonsoft.Json.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Helpers.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Mvc.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Optimization.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.Razor.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.WebPages.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.WebPages.Deployment.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\System.Web.WebPages.Razor.xml
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\Antlr3.Runtime.pdb
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.Helpers.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.Mvc.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.Optimization.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.Razor.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.WebPages.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\obj\Debug\sistemaESDO.csproj.AssemblyReference.cache
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\obj\Debug\sistemaESDO.csproj.CoreCompileInputs.cache
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\obj\Debug\sistemaESDO.csproj.CopyComplete
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\obj\Debug\sistemaESDO.dll
+C:\Lionel\Proyecto final\ESDO\sistemaESDO\obj\Debug\sistemaESDO.pdb
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\sistemaESDO.dll.config
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\sistemaESDO.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\sistemaESDO.pdb
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\csc.exe
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\csc.exe.config
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\csc.rsp
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\csi.exe
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\csi.exe.config
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\csi.rsp
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Buffers.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Collections.Immutable.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Memory.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Numerics.Vectors.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Reflection.Metadata.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\vbc.exe
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\vbc.exe.config
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\vbc.rsp
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\VBCSCompiler.exe
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\roslyn\VBCSCompiler.exe.config
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Antlr3.Runtime.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\EntityFramework.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\EntityFramework.SqlServer.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Microsoft.Web.Infrastructure.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Newtonsoft.Json.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Helpers.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Mvc.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Optimization.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Razor.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.WebPages.Deployment.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.WebPages.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.WebPages.Razor.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\WebGrease.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\EntityFramework.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\EntityFramework.SqlServer.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Newtonsoft.Json.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Helpers.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Mvc.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Optimization.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.Razor.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.WebPages.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.WebPages.Deployment.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\System.Web.WebPages.Razor.xml
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\Antlr3.Runtime.pdb
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.Helpers.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.Mvc.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.Optimization.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.Razor.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.WebPages.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\obj\Debug\sistemaESDO.csproj.AssemblyReference.cache
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\obj\Debug\sistemaESDO.csproj.CoreCompileInputs.cache
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\obj\Debug\sistemaESDO.csproj.CopyComplete
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\obj\Debug\sistemaESDO.dll
+D:\Lionel\Proyecto final - ISP 62\Nuevo\ESDO\sistemaESDO\obj\Debug\sistemaESDO.pdb

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sistemaESDOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="direccionesData">
+    <Key>
+      <PropertyRef Name="dirID" />
+    </Key>
+    <Property Name="dirID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dirDireccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="dirDescripcion" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="estadoTurnoData">
+    <Key>
+      <PropertyRef Name="etID" />
+    </Key>
+    <Property Name="etID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="etNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="etDescripcion" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="horariosData">
+    <Key>
+      <PropertyRef Name="horID" />
+    </Key>
+    <Property Name="horID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="horHorarios" Type="nvarchar" MaxLength="50" />
+    <Property Name="horTipoTurnoID" Type="int" />
+  </EntityType>
+  <EntityType Name="PasswordResetTokens">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="Token" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ExpirationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="profesionalesData">
+    <Key>
+      <PropertyRef Name="proID" />
+    </Key>
+    <Property Name="proID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="proApellidoNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="proDireccionID" Type="int" />
+  </EntityType>
+  <EntityType Name="tipoTurnosData">
+    <Key>
+      <PropertyRef Name="ttID" />
+    </Key>
+    <Property Name="ttID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ttNombre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="turnosData">
+    <Key>
+      <PropertyRef Name="turID" />
+    </Key>
+    <Property Name="turID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="turNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="turApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="turEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="turTelefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="turFecha" Type="datetime" />
+    <Property Name="turMensaje" Type="nvarchar" MaxLength="1024" />
+    <Property Name="turTipoTurno" Type="int" />
+    <Property Name="turHorario" Type="int" />
+    <Property Name="turEstadoTurno" Type="int" />
+    <Property Name="turProfesionales" Type="int" />
+    <Property Name="turDirecciones" Type="int" />
+  </EntityType>
+  <EntityType Name="turnosTempData">
+    <Key>
+      <PropertyRef Name="turTempID" />
+    </Key>
+    <Property Name="turTempID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="turTempNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="turTempApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="turTempEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="turTempTelefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="turTempFecha" Type="datetime" />
+    <Property Name="turTempMensaje" Type="nvarchar" MaxLength="1024" />
+    <Property Name="turTempTipoTurno" Type="int" />
+    <Property Name="turTempHorario" Type="int" />
+  </EntityType>
+  <EntityType Name="usuarioData">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="userApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="userEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="userContrasena" Type="nvarchar(max)" />
+    <Property Name="userRolID" Type="int" />
+  </EntityType>
+  <EntityType Name="usuarioRolData">
+    <Key>
+      <PropertyRef Name="rolID" />
+    </Key>
+    <Property Name="rolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rolNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="rolPoder" Type="int" />
+  </EntityType>
+  <Association Name="FK_profesionalesData_direccionesData">
+    <End Role="direccionesData" Type="Self.direccionesData" Multiplicity="0..1" />
+    <End Role="profesionalesData" Type="Self.profesionalesData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="direccionesData">
+        <PropertyRef Name="dirID" />
+      </Principal>
+      <Dependent Role="profesionalesData">
+        <PropertyRef Name="proDireccionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_turnosData_direccionesData">
+    <End Role="direccionesData" Type="Self.direccionesData" Multiplicity="0..1" />
+    <End Role="turnosData" Type="Self.turnosData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="direccionesData">
+        <PropertyRef Name="dirID" />
+      </Principal>
+      <Dependent Role="turnosData">
+        <PropertyRef Name="turDirecciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_turnosData_estadoTurnoData">
+    <End Role="estadoTurnoData" Type="Self.estadoTurnoData" Multiplicity="0..1" />
+    <End Role="turnosData" Type="Self.turnosData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estadoTurnoData">
+        <PropertyRef Name="etID" />
+      </Principal>
+      <Dependent Role="turnosData">
+        <PropertyRef Name="turEstadoTurno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_turnosData_horariosData">
+    <End Role="horariosData" Type="Self.horariosData" Multiplicity="0..1" />
+    <End Role="turnosData" Type="Self.turnosData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="horariosData">
+        <PropertyRef Name="horID" />
+      </Principal>
+      <Dependent Role="turnosData">
+        <PropertyRef Name="turHorario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_turnosData_profesionalesData">
+    <End Role="profesionalesData" Type="Self.profesionalesData" Multiplicity="0..1" />
+    <End Role="turnosData" Type="Self.turnosData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="profesionalesData">
+        <PropertyRef Name="proID" />
+      </Principal>
+      <Dependent Role="turnosData">
+        <PropertyRef Name="turProfesionales" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_turnosData_tipoTurnosData">
+    <End Role="tipoTurnosData" Type="Self.tipoTurnosData" Multiplicity="0..1" />
+    <End Role="turnosData" Type="Self.turnosData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipoTurnosData">
+        <PropertyRef Name="ttID" />
+      </Principal>
+      <Dependent Role="turnosData">
+        <PropertyRef Name="turTipoTurno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuarioData_usuarioRolData">
+    <End Role="usuarioRolData" Type="Self.usuarioRolData" Multiplicity="0..1" />
+    <End Role="usuarioData" Type="Self.usuarioData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarioRolData">
+        <PropertyRef Name="rolID" />
+      </Principal>
+      <Dependent Role="usuarioData">
+        <PropertyRef Name="userRolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sistemaESDOModelStoreContainer">
+    <EntitySet Name="direccionesData" EntityType="Self.direccionesData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="estadoTurnoData" EntityType="Self.estadoTurnoData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="horariosData" EntityType="Self.horariosData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PasswordResetTokens" EntityType="Self.PasswordResetTokens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profesionalesData" EntityType="Self.profesionalesData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tipoTurnosData" EntityType="Self.tipoTurnosData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="turnosData" EntityType="Self.turnosData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="turnosTempData" EntityType="Self.turnosTempData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarioData" EntityType="Self.usuarioData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarioRolData" EntityType="Self.usuarioRolData" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_profesionalesData_direccionesData" Association="Self.FK_profesionalesData_direccionesData">
+      <End Role="direccionesData" EntitySet="direccionesData" />
+      <End Role="profesionalesData" EntitySet="profesionalesData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_turnosData_direccionesData" Association="Self.FK_turnosData_direccionesData">
+      <End Role="direccionesData" EntitySet="direccionesData" />
+      <End Role="turnosData" EntitySet="turnosData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_turnosData_estadoTurnoData" Association="Self.FK_turnosData_estadoTurnoData">
+      <End Role="estadoTurnoData" EntitySet="estadoTurnoData" />
+      <End Role="turnosData" EntitySet="turnosData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_turnosData_horariosData" Association="Self.FK_turnosData_horariosData">
+      <End Role="horariosData" EntitySet="horariosData" />
+      <End Role="turnosData" EntitySet="turnosData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_turnosData_profesionalesData" Association="Self.FK_turnosData_profesionalesData">
+      <End Role="profesionalesData" EntitySet="profesionalesData" />
+      <End Role="turnosData" EntitySet="turnosData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_turnosData_tipoTurnosData" Association="Self.FK_turnosData_tipoTurnosData">
+      <End Role="tipoTurnosData" EntitySet="tipoTurnosData" />
+      <End Role="turnosData" EntitySet="turnosData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuarioData_usuarioRolData" Association="Self.FK_usuarioData_usuarioRolData">
+      <End Role="usuarioRolData" EntitySet="usuarioRolData" />
+      <End Role="usuarioData" EntitySet="usuarioData" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

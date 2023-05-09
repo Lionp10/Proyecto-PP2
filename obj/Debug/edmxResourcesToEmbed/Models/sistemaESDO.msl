@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sistemaESDOModelStoreContainer" CdmEntityContainer="sistemaESDOEntities">
+    <EntitySetMapping Name="direccionesData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.direccionesData">
+        <MappingFragment StoreEntitySet="direccionesData">
+          <ScalarProperty Name="dirDescripcion" ColumnName="dirDescripcion" />
+          <ScalarProperty Name="dirDireccion" ColumnName="dirDireccion" />
+          <ScalarProperty Name="dirID" ColumnName="dirID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estadoTurnoData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.estadoTurnoData">
+        <MappingFragment StoreEntitySet="estadoTurnoData">
+          <ScalarProperty Name="etDescripcion" ColumnName="etDescripcion" />
+          <ScalarProperty Name="etNombre" ColumnName="etNombre" />
+          <ScalarProperty Name="etID" ColumnName="etID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="horariosData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.horariosData">
+        <MappingFragment StoreEntitySet="horariosData">
+          <ScalarProperty Name="horTipoTurnoID" ColumnName="horTipoTurnoID" />
+          <ScalarProperty Name="horHorarios" ColumnName="horHorarios" />
+          <ScalarProperty Name="horID" ColumnName="horID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PasswordResetTokens">
+      <EntityTypeMapping TypeName="sistemaESDOModel.PasswordResetTokens">
+        <MappingFragment StoreEntitySet="PasswordResetTokens">
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profesionalesData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.profesionalesData">
+        <MappingFragment StoreEntitySet="profesionalesData">
+          <ScalarProperty Name="proDireccionID" ColumnName="proDireccionID" />
+          <ScalarProperty Name="proApellidoNombre" ColumnName="proApellidoNombre" />
+          <ScalarProperty Name="proID" ColumnName="proID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipoTurnosData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.tipoTurnosData">
+        <MappingFragment StoreEntitySet="tipoTurnosData">
+          <ScalarProperty Name="ttNombre" ColumnName="ttNombre" />
+          <ScalarProperty Name="ttID" ColumnName="ttID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="turnosData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.turnosData">
+        <MappingFragment StoreEntitySet="turnosData">
+          <ScalarProperty Name="turDirecciones" ColumnName="turDirecciones" />
+          <ScalarProperty Name="turProfesionales" ColumnName="turProfesionales" />
+          <ScalarProperty Name="turEstadoTurno" ColumnName="turEstadoTurno" />
+          <ScalarProperty Name="turHorario" ColumnName="turHorario" />
+          <ScalarProperty Name="turTipoTurno" ColumnName="turTipoTurno" />
+          <ScalarProperty Name="turMensaje" ColumnName="turMensaje" />
+          <ScalarProperty Name="turFecha" ColumnName="turFecha" />
+          <ScalarProperty Name="turTelefono" ColumnName="turTelefono" />
+          <ScalarProperty Name="turEmail" ColumnName="turEmail" />
+          <ScalarProperty Name="turApellido" ColumnName="turApellido" />
+          <ScalarProperty Name="turNombre" ColumnName="turNombre" />
+          <ScalarProperty Name="turID" ColumnName="turID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="turnosTempData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.turnosTempData">
+        <MappingFragment StoreEntitySet="turnosTempData">
+          <ScalarProperty Name="turTempHorario" ColumnName="turTempHorario" />
+          <ScalarProperty Name="turTempTipoTurno" ColumnName="turTempTipoTurno" />
+          <ScalarProperty Name="turTempMensaje" ColumnName="turTempMensaje" />
+          <ScalarProperty Name="turTempFecha" ColumnName="turTempFecha" />
+          <ScalarProperty Name="turTempTelefono" ColumnName="turTempTelefono" />
+          <ScalarProperty Name="turTempEmail" ColumnName="turTempEmail" />
+          <ScalarProperty Name="turTempApellido" ColumnName="turTempApellido" />
+          <ScalarProperty Name="turTempNombre" ColumnName="turTempNombre" />
+          <ScalarProperty Name="turTempID" ColumnName="turTempID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarioData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.usuarioData">
+        <MappingFragment StoreEntitySet="usuarioData">
+          <ScalarProperty Name="userRolID" ColumnName="userRolID" />
+          <ScalarProperty Name="userContrasena" ColumnName="userContrasena" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="userApellido" ColumnName="userApellido" />
+          <ScalarProperty Name="userNombre" ColumnName="userNombre" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarioRolData">
+      <EntityTypeMapping TypeName="sistemaESDOModel.usuarioRolData">
+        <MappingFragment StoreEntitySet="usuarioRolData">
+          <ScalarProperty Name="rolPoder" ColumnName="rolPoder" />
+          <ScalarProperty Name="rolNombre" ColumnName="rolNombre" />
+          <ScalarProperty Name="rolID" ColumnName="rolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

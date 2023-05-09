@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="548fc65d798644e6b182d16c84f6e626" Name="Diagram1" ZoomLevel="68">
+        <EntityTypeShape EntityType="sistemaESDOModel.direccionesData" Width="1.5" PointX="0.75" PointY="2.25" />
+        <EntityTypeShape EntityType="sistemaESDOModel.estadoTurnoData" Width="1.5" PointX="3" PointY="7.875" />
+        <EntityTypeShape EntityType="sistemaESDOModel.horariosData" Width="1.5" PointX="3" PointY="10.375" />
+        <EntityTypeShape EntityType="sistemaESDOModel.PasswordResetTokens" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="sistemaESDOModel.profesionalesData" Width="1.5" PointX="3" PointY="2.25" />
+        <EntityTypeShape EntityType="sistemaESDOModel.tipoTurnosData" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="sistemaESDOModel.turnosData" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="sistemaESDOModel.turnosTempData" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="sistemaESDOModel.usuarioData" Width="1.5" PointX="8" PointY="7" />
+        <EntityTypeShape EntityType="sistemaESDOModel.usuarioRolData" Width="1.5" PointX="5.75" PointY="7.25" />
+        <AssociationConnector Association="sistemaESDOModel.FK_profesionalesData_direccionesData" />
+        <AssociationConnector Association="sistemaESDOModel.FK_turnosData_direccionesData" />
+        <AssociationConnector Association="sistemaESDOModel.FK_turnosData_estadoTurnoData" />
+        <AssociationConnector Association="sistemaESDOModel.FK_turnosData_horariosData" />
+        <AssociationConnector Association="sistemaESDOModel.FK_turnosData_profesionalesData" />
+        <AssociationConnector Association="sistemaESDOModel.FK_turnosData_tipoTurnosData" />
+        <AssociationConnector Association="sistemaESDOModel.FK_usuarioData_usuarioRolData" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

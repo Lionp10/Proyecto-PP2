@@ -1,0 +1,57 @@
+﻿@model sistemaESDO.Models.ViewModels.UsuarioViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AccessLayout.cshtml";
+}
+
+<div class="form-signin-body">
+    <div class="form-signin">
+        @using (Html.BeginForm("Login", "Acceso", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <h1 class="h3 mb-3 fw-normal text-center">Bienvenido/a</h1>
+            <div class="list-group ms-auto text-center">
+                <div>
+                    <i class="bi bi-person"></i> @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @class = "max-width-input", @placeholder = "Ingrese su email" } })
+                </div>
+                <div>
+                    <i class="bi bi-lock"></i> @Html.EditorFor(model => model.UserContrasena, new { htmlAttributes = new { @class = "max-width-input", @placeholder = "Ingrese su contraseña", @type = "password", @id = "pass" } })
+                </div>
+                @Html.ValidationMessage("LoginError", new { @class = "text-danger" })
+            </div>
+            <div class="form-check mb-3 toggle-checkbox" style="margin: 0 45px">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label text-start" for="flexCheckDefault">
+                    Mostrar contraseña
+                </label>
+            </div>
+            <div class="text-center">
+                <input type="submit" name="submit" class="btn btn-primary btn-block mb-3" value="Acceder" />
+            </div>           
+        }
+        <div class="text-center">
+            <a href="@Url.Action("EmailRestPassword", "Acceso")">¿Olvidaste tu contraseña?</a>
+            <p class="mt-5 mb-3 text-muted">Nunca compartas tu información con otras personas.</p>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Seleccione la casilla de verificación y el campo de contraseña por su ID
+            var toggleCheckbox = $('.toggle-checkbox');
+            var password = $('#pass');
+
+            // Al hacer clic en la casilla de verificación
+            toggleCheckbox.on('click', function () {
+                // Obtener el estado actual de la casilla de verificación
+                var isChecked = toggleCheckbox.is(':checked');
+
+                // Cambiar el tipo de entrada del campo de contraseña dependiendo del estado de la casilla de verificación
+                password.attr('type', isChecked ? 'text' : 'password');
+            });
+        });
+    </script>
+}

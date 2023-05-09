@@ -1,0 +1,25 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #efefef;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* -- Navbar contenido dinamico --*/
+.nav-style {
+    box-shadow: 5px 5px 15px gray;
+}

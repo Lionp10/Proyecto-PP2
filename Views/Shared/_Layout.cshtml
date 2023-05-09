@@ -1,0 +1,119 @@
+﻿@using sistemaESDO.Helpers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - El Sentido del Oído</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Title & Favicon-->
+    <title>@ViewBag.Title - El Sentido del Oído</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Imagenes/Esdo.ico">
+
+    <!-- DataTables -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-colvis-2.3.6/b-html5-2.3.6/cr-1.6.2/date-1.4.1/fh-3.3.2/kt-2.8.2/r-2.4.1/sb-1.4.2/sp-2.1.2/sl-1.6.2/sr-1.2.2/datatables.min.css" rel="stylesheet" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap & icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Extras -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    
+
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="toggle">
+            <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                <span></span>
+            </a>
+        </div>
+        <div class="side-inner">
+
+            <div class="logo-wrap">
+                <div class="logo">
+                    <img style="width:50px; height:40px;" src="~/Content/Imagenes/LogoOido.png" alt="Alternate Text" />
+                </div>
+                <span class="logo-text">El Sentido del Oído</span>
+            </div>
+
+            <div class="nav-menu">
+                <ul>
+                    <li class="active"><a href="@Url.Action("Index", "Inicio")" class="d-flex align-items-center"><i class="bi bi-house"></i> <span class="menu-text" style="left: 50px;"> Inicio</span></a></li>
+                    <li><a href="@Url.Action("Crear", "Usuarios")" class="d-flex align-items-center"><i class="bi bi-people"></i> <span class="menu-text"> Usuarios</span></a></li>
+                    <li><a href="#" class="d-flex align-items-center"><i class="bi bi-journals"></i> <span class="menu-text"> Books</span></a></li>
+                    <li><a href="#" class="d-flex align-items-center"><i class="bi bi-cart"></i> <span class="menu-text"> Store</span></a></li>
+                    <li><a href="#" class="d-flex align-items-center"><i class="bi bi-pie-chart"></i> <span class="menu-text"> Analytics</span></a></li>                    
+                </ul>
+                <ul class="logoff">
+                    <li><a href="@Url.Action("Desconectarse", "Acceso")" class="d-flex align-items-center"><i class="bi bi-box-arrow-left"></i> <span class="menu-text"> Cerrar sesión</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </aside>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-end align-items-end">
+                    <a href="#"><i class="bi bi-person-circle"></i></a>
+                    <a href="#"><i class="bi bi-bell"></i></a>
+                    <a href="@Url.Action("Index", "Home")">Ir a la web</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="container-fluid" style="margin: 0; padding: 0;">
+                        @RenderBody()
+                        <footer>
+                            <p class="text-center">&copy; @DateTime.Now.Year - El Sentido del Oído - By: <a href="https://www.linkedin.com/in/lionel-pesaresi-905a36238/" target="_blank">Lionel Pesaresi</a></p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @*<div class="container-fluid" style="margin: 0; padding: 0;">
+        @RenderBody()
+        <footer>
+            <p class="text-center">&copy; @DateTime.Now.Year - El Sentido del Oído - By: <a href="https://www.linkedin.com/in/lionel-pesaresi-905a36238/" target="_blank">Lionel Pesaresi</a></p>
+        </footer>
+    </div>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <!-- DataTables -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-colvis-2.3.6/b-html5-2.3.6/cr-1.6.2/date-1.4.1/fh-3.3.2/kt-2.8.2/r-2.4.1/sb-1.4.2/sp-2.1.2/sl-1.6.2/sr-1.2.2/datatables.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Extras -->
+    <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+
+</body>
+</html>

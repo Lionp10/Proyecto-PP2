@@ -1,0 +1,237 @@
+﻿@model sistemaESDO.Models.ViewModels.CrearUsuarioViewModel
+@{
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Navbar contenido dinámico -->
+<div class="bg-light m-auto nav-style w-75 py-2">
+    <ul class="nav d-flex justify-content-center align-items-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="@Url.Action("Crear", "Usuarios")">Crear</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("Listado", "Usuarios")">Modificar</a>
+        </li>
+    </ul>
+</div>
+
+@using (Html.BeginForm("Crear", "Usuarios", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col mb-3">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h3>Crear usuarios</h3>
+                </div>
+                <div class="card-body">
+                    @Html.AntiForgeryToken()
+                    <div class="row g-3">
+
+                        <!-- userNombre -->
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => model.UserNombre, htmlAttributes: new { @class = "form-label" })
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-vcard"></i></span>
+                                @Html.EditorFor(model => model.UserNombre, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese el nombre del usuario" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.UserNombre, "", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- userApellido -->
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => model.UserApellido, htmlAttributes: new { @class = "form-label" })
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-vcard"></i></span>
+                                @Html.EditorFor(model => model.UserApellido, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese el apellido del usuario" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.UserApellido, "", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- userEmail -->
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => model.UserEmail, htmlAttributes: new { @class = "form-label" })
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                                @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese el email del usuario" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.UserEmail, "", new { @class = "text-danger" })
+                            @Html.ValidationMessage("Email", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- userContraseña -->
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.UserContrasena, htmlAttributes: new { @class = "form-label" })
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock"></i></span>
+                                @Html.EditorFor(model => model.UserContrasena, new { htmlAttributes = new { @class = "form-control", @type = "password", @id = "password-field", @placeholder = "Ingrese una contraseña" } })
+                                <span class="input-group-text"><a href="#" style="color: dimgray;" class="reveal"><i class="bi bi-eye-slash"></i></a></span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.UserContrasena, "", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- userConfirmarContraseña -->
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.UserConfirmarContrasena, htmlAttributes: new { @class = "form-label" })
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock"></i></span>
+                                @Html.EditorFor(model => model.UserConfirmarContrasena, new { htmlAttributes = new { @class = "form-control", @type = "password", @id = "repitpassword-field", @placeholder = "Repita la contraseña" } })
+                                <span class="input-group-text"><a href="#" style="color: dimgray;" class="reveal2"><i class="bi bi-eye-slash"></i></a></span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.UserConfirmarContrasena, "", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- selRol -->
+                        <div class="col-md-12">
+                            @Html.LabelFor(model => model.selRol, htmlAttributes: new { @class = "form-label" })
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-tag"></i></span>
+                                @Html.DropDownListFor(model => model.selRol, Model.rolesList, "Selecciona un rol para el usuario", new { @class = "form-control form-select" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.selRol, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-12">
+                            @Html.ActionLink("Volver", "Index", "Inicio", new { }, new { @class = "btn btn-secondary" })
+                            <input id="btnCrear" type="submit" value="Crear" class="btn btn-primary" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<hr />
+
+<!-- Tabla listado de usuarios -->
+<div class="row">
+    <div class="col mb-3">
+        <div class="card mt-3">
+            <div class="card-header">
+                <h3>Listado de usuarios</h3>
+            </div>
+            <!-- Tabla -->
+            <div class="card-body">
+                <table id="tablaUsuarios" class="table table-hover table-bordered table-responsive-md"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Mostrar ocultar contraseña
+            $('.reveal').click(function () {
+                var passwordField = $('#password-field');
+                var passwordFieldType = passwordField.attr('type');
+                if (passwordFieldType === 'password') {
+                    passwordField.attr('type', 'text');
+                    $(this).html('<i class="fa fa-eye-slash"></i>');
+                } else {
+                    passwordField.attr('type', 'password');
+                    $(this).html('<i class="fa fa-eye"></i>');
+                }
+            });
+
+            // Mostrar ocultar repetir contraseña
+            $('.reveal2').click(function () {
+                var passwordField = $('#repitpassword-field');
+                var passwordFieldType = passwordField.attr('type');
+                if (passwordFieldType === 'password') {
+                    passwordField.attr('type', 'text');
+                    $(this).html('<i class="fa fa-eye-slash"></i>');
+                } else {
+                    passwordField.attr('type', 'password');
+                    $(this).html('<i class="fa fa-eye"></i>');
+                }
+            });
+
+            // Ventana modal
+            $('#infoModal').modal('show');
+            $('.modal-header button').on('click', function () {
+                $('#infoModal').modal('hide');
+            });
+
+            // Tabla
+            var table = $('#tablaUsuarios').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "filter": true,
+                "orderMulti": false,
+                "responsive": true,
+                "autoWidth": false,
+                "pageLength": 10,
+                "dom": "<'row'<'col-sm-6 col-xs-12'B><'col-sm-6 col-xs-12'f>><'row'<'col-12'rt>><'row'<'col-sm-6'i><'col-sm-6'p>>",
+
+                "buttons": [
+                    {
+                        "extend": 'pageLength',
+                        "className": 'btn btn-secondary',
+                    },
+                    {
+                        "extend": 'excel',
+                        "className": 'btn btn-secondary',
+                        "text": '<i class="far fa-file-excel"></i> Excel',
+                        "exportOptions": {
+                            "columns": [0, 1, 2, 3]
+                        }
+                    },
+                    {
+                        "extend": 'pdfHtml5',
+                        "download": 'open',
+                        "className": 'btn btn-secondary',
+                        "text": '<i class="far fa-file-pdf"></i> PDF',
+                        "exportOptions": {
+                            "columns": [0, 1, 2, 3]
+                        },
+                        customize: function (doc) {
+                            doc.content[1].table.widths =
+                                Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                            doc.content[1].table.widths = ['10%', '30%', '30%', '30%'];
+
+                        }
+                    },
+                ],
+
+                "lengthMenu": [
+                    [10, 25, 50, 100, 500, 1000],
+                    ['10 filas', '25 filas', '50 filas', '100 filas', '500 filas', '1000 filas']
+                ],
+
+                "ajax": {
+                    "url": "@Url.Action("ListadoUser", "Usuarios")",
+                    "type": "POST",
+                    "datatype": "json"
+                },
+
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ filas",
+                    "zeroRecords": "Ningún resultado encontrado",
+                    "info": "Página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Sin datos",
+                    "search": "",
+                    "searchPlaceholder": "Buscar... (#, nombre, apellido, email, rol)",
+                    "processing": "Procesando...",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Último",
+                        "next": ">",
+                        "previous": "<"
+                    }
+                },
+
+                "columns": [
+                    { "data": "UserID", "title": "#", "name": "UserID", "width": "10%", "classNmae": "text-center", "orderable": true },
+                    { "data": "userNombreCompleto", "title": "Nombre completo", "name": "userNombreCompleto", "width": "30%", "classNmae": "text-center", "orderable": true },
+                    { "data": "UserEmail", "title": "Email", "name": "UserEmail", "width": "30%", "classNmae": "text-center", "orderable": true },
+                    { "data": "rolNombre", "title": "Rol", "name": "rolNombre", "width": "30%", "classNmae": "text-center", "orderable": true }
+                ],
+            });
+        });
+    </script>
+}
+

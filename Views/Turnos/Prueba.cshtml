@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "Prueba";
+}
+
+<h2>Prueba</h2>
+
+<div id="progg1" class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%">0%</div>
+</div>
+
+<div id="progg2" class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 25%">25%</div>
+</div>
+
+<div id="progg3" class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%">50%</div>
+</div>
+
+<div id="progg4" class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+</div>
+
+<div id="progg5" class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+</div>
+
+<div class="accordion" id="myAccordion">
+    <!-- Primera sección -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Sección 1
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+            <div class="accordion-body">
+                <!-- Contenido de la primera sección -->
+                <button class="btn btn-primary next-section">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda sección -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Sección 2
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#myAccordion">
+            <div class="accordion-body">
+                <!-- Contenido de la segunda sección -->
+                <button class="btn btn-primary prev-section">Atrás</button>
+                <button class="btn btn-primary next-section">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tercera sección -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Sección 3
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#myAccordion">
+            <div class="accordion-body">
+                <!-- Contenido de la tercera sección -->
+                <button class="btn btn-primary prev-section">Atrás</button>
+                <button class="btn btn-primary next-section">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cuarta sección -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Sección 4
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#myAccordion">
+            <div class="accordion-body">
+                <!-- Contenido de la tercera sección -->
+                <button class="btn btn-primary prev-section">Atrás</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            var accordion = $('#myAccordion');
+            var sections = accordion.find('.accordion-item');
+            var numSections = sections.length;
+
+            // Habilitar el botón "Siguiente" de la primera sección
+            accordion.find('.accordion-item:first-child .next-section').prop('disabled', false);
+
+            // Escuchar el evento "click" del botón "Siguiente"
+            accordion.on('click', '.next-section', function () {
+                var currentSection = $(this).parents('.accordion-item');
+                var nextSection = currentSection.next('.accordion-item');
+
+                // Cerrar la sección actual y abrir la siguiente
+                currentSection.find('.accordion-button').attr('aria-expanded', false).addClass('collapsed');
+                currentSection.find('.collapse').removeClass('show');
+                currentSection.find('.next-section').prop('disabled', true);
+
+                nextSection.find('.accordion-button').attr('aria-expanded', true).removeClass('collapsed');
+                nextSection.find('.collapse').addClass('show');
+                nextSection.find('.next-section').prop('disabled', false);
+                nextSection.find('.prev-section').prop('disabled', false);
+
+            });
+
+            // Escuchar el evento "click" del botón "Atrás"
+            accordion.on('click', '.prev-section', function () {
+                var currentSection = $(this).parents('.accordion-item');
+                var prevSection = currentSection.prev('.accordion-item');
+
+                // Cerrar la sección actual y abrir la anterior
+                currentSection.find('.accordion-button').attr('aria-expanded', false).addClass('collapsed');
+                currentSection.find('.collapse').removeClass('show');
+                currentSection.find('.prev-section').prop('disabled', true);
+
+                prevSection.find('.accordion-button').attr('aria-expanded', true).removeClass('collapsed');
+                prevSection.find('.collapse').addClass('show');
+                prevSection.find('.next-section').prop('disabled', false);
+                prevSection.find('.prev-section').prop('disabled', false);
+
+            });
+        });
+
+    </script>
+
+
+}
